@@ -3,10 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кулинарные новости — Всё о крылышках</title>
+    
+    <!-- SEO Мета-теги -->
+    <title>Кулинарные новости: лучшие рецепты куриных крылышек и соусов — Крылышки News</title>
+    <meta name="description" content="Свежие кулинарные новости, секреты хрустящей корочки, авторские рецепты соусов и гастрономические тренды со всего мира на портале Крылышки News.">
+    <meta name="keywords" content="куриные крылышки, рецепты крылышек, соус для крылышек, манго хабанеро, крылышки баффало, хрустящие крылышки">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (для Telegram, VK, WhatsApp, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:site_name" content="Крылышки News">
+    <meta property="og:title" content="Крылышки News — Главный кулинарный портал о куриных крылышках">
+    <meta property="og:description" content="Рецепты хрустящей корочки, секретные соусы от шеф-поваров, обзоры и гастрономические новости со всего мира.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=1200&h=630&q=80">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Сочные куриные крылышки с острым соусом">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Крылышки News — Главный кулинарный портал">
+    <meta name="twitter:description" content="Рецепты хрустящей корочки, секретные соусы и гастрономические новости.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=1200&h=630&q=80">
+
     <link rel="stylesheet" href="style.css">
-    <!-- Подключаем иконки FontAwesome для шапки и футера -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema.org Микроразметка для поисковиков -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "Крылышки News",
+          "url": "https://yourdomain.com/",
+          "description": "Главный кулинарный портал, посвященный культуре приготовления куриных крылышек и соусов."
+        },
+        {
+          "@type": "NewsArticle",
+          "headline": "Революция вкуса: изобретен новый взрывной соус «Манго-Хабанеро Экстрим» для крылышек",
+          "image": [
+            "https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=1200&q=80"
+          ],
+          "datePublished": "2026-09-30T00:00:00+05:00",
+          "dateModified": "2026-09-30T00:00:00+05:00",
+          "author": {
+            "@type": "Organization",
+            "name": "Редакция Крылышки News"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -14,10 +65,10 @@
     <header class="site-header">
         <div class="container header-container">
             <div class="logo">
-                <i class="fa-solid fa-drumstick-bite"></i>
+                <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i>
                 <span>Крылышки <strong>News</strong></span>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav" aria-label="Основная навигация">
                 <a href="#hero">Главная</a>
                 <a href="#news">Все новости</a>
                 <a href="#news">Рецепты</a>
@@ -25,10 +76,10 @@
             </nav>
             <div class="header-actions">
                 <div class="search-box">
-                    <input type="text" placeholder="Поиск новостей...">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Поиск новостей..." aria-label="Поиск по новостям">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                 </div>
-                <button class="btn-subscribe">Подписаться</button>
+                <button class="btn-subscribe" type="button">Подписаться</button>
             </div>
         </div>
     </header>
@@ -47,7 +98,7 @@
     <!-- Основной контент (Новости) -->
     <main id="news" class="container main-content">
         <div class="section-title">
-            <h2>Главные кулинарные новости</h2>
+            <h2>Главные кулинарные новости и рецепты</h2>
             <p>Самые свежие открытия, соусы и рецепты хрустящих крылышек</p>
         </div>
 
@@ -55,12 +106,12 @@
             <!-- 1. Главная большая новость -->
             <article class="news-card main-news" onclick="openModal('main')">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=1200&q=80" alt="Совершенно новый секретный соус для куриных крылышек на основе манго и хабанеро" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=1200&q=80" alt="Соус Манго-Хабанеро Экстрим для куриных крылышек" class="card-img" loading="eager">
                     <span class="news-category">Новинка</span>
                 </div>
                 <div class="card-content">
                     <div class="news-meta">
-                        <span><i class="fa-regular fa-calendar"></i> 30 Сентября, 2026</span>
+                        <span><i class="fa-regular fa-calendar"></i> <time datetime="2026-09-30">30 Сентября, 2026</time></span>
                         <span><i class="fa-regular fa-clock"></i> 5 мин чтения</span>
                     </div>
                     <h3>Революция вкуса: изобретен новый взрывной соус «Манго-Хабанеро Экстрим» для крылышек</h3>
@@ -72,14 +123,14 @@
             <!-- 2. Новость -->
             <article class="news-card" onclick="openModal('news2')">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=600&q=80" alt="Хрустящие крылышки в панировке из кунжута и острого чили" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=600&q=80" alt="Японская панировка для хрустящих крылышек в кунжуте" class="card-img" loading="lazy">
                     <span class="news-category">Рецепты</span>
                 </div>
                 <div class="card-content">
                     <div class="news-meta">
-                        <span><i class="fa-regular fa-calendar"></i> 29 Сентября</span>
+                        <span><i class="fa-regular fa-calendar"></i> <time datetime="2026-09-29">29 Сентября</time></span>
                     </div>
-                    <h4>Секрет идеального хруста: японская панировка для крылышек</h4>
+                    <h3>Секрет идеального хруста: японская панировка для крылышек</h3>
                     <p class="news-snippet">Как приготовить хрустящую корочку без грамма лишнего масла с помощью воздушного риса и специй.</p>
                     <span class="read-more">Читать <i class="fa-solid fa-arrow-right"></i></span>
                 </div>
@@ -88,14 +139,14 @@
             <!-- 3. Новость -->
             <article class="news-card" onclick="openModal('news3')">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=600&q=80" alt="Острые крылышки Баффало с соусом блю чиз и сельдереем" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=600&q=80" alt="Острые крылышки Баффало с соусом блю чиз" class="card-img" loading="lazy">
                     <span class="news-category">Тренды</span>
                 </div>
                 <div class="card-content">
                     <div class="news-meta">
-                        <span><i class="fa-regular fa-calendar"></i> 28 Сентября</span>
+                        <span><i class="fa-regular fa-calendar"></i> <time datetime="2026-09-28">28 Сентября</time></span>
                     </div>
-                    <h4>Чем заменить классический Баффало: топ-3 альтернативных соуса</h4>
+                    <h3>Чем заменить классический Баффало: топ-3 альтернативных соуса</h3>
                     <p class="news-snippet">Обзор необычных кисло-сладких и пряных соусов, которые идеально подчеркивают вкус птицы.</p>
                     <span class="read-more">Читать <i class="fa-solid fa-arrow-right"></i></span>
                 </div>
@@ -104,14 +155,14 @@
             <!-- 4. Новость -->
             <article class="news-card" onclick="openModal('news4')">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Приготовление крылышек на открытом огне с дымком барбекю" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" alt="Приготовление маринованных крылышек на гриле и углях" class="card-img" loading="lazy">
                     <span class="news-category">Барбекю</span>
                 </div>
                 <div class="card-content">
                     <div class="news-meta">
-                        <span><i class="fa-regular fa-calendar"></i> 27 Сентября</span>
+                        <span><i class="fa-regular fa-calendar"></i> <time datetime="2026-09-27">27 Сентября</time></span>
                     </div>
-                    <h4>Гриль-сезон продолжается: маринад с дымком для крылышек на углях</h4>
+                    <h3>Гриль-сезон продолжается: маринад с дымком для крылышек на углях</h3>
                     <p class="news-snippet">Простой рецепт маринада на основе копченой паприки и соевого соуса для пикника.</p>
                     <span class="read-more">Читать <i class="fa-solid fa-arrow-right"></i></span>
                 </div>
@@ -120,14 +171,14 @@
             <!-- 5. Новость -->
             <article class="news-card" onclick="openModal('news5')">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=600&q=80" alt="Запеченные острые куриные крылышки с зеленью" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=600&q=80" alt="Запеченные диетические куриные крылышки в духовке" class="card-img" loading="lazy">
                     <span class="news-category">Здоровье</span>
                 </div>
                 <div class="card-content">
                     <div class="news-meta">
-                        <span><i class="fa-regular fa-calendar"></i> 26 Сентября</span>
+                        <span><i class="fa-regular fa-calendar"></i> <time datetime="2026-09-26">26 Сентября</time></span>
                     </div>
-                    <h4>Фитнес-версия: как приготовить крылышки без вреда для фигуры</h4>
+                    <h3>Фитнес-версия: как приготовить крылышки без вреда для фигуры</h3>
                     <p class="news-snippet">Запекание в духовке с конвекцией дает потрясающий результат без фритюра.</p>
                     <span class="read-more">Читать <i class="fa-solid fa-arrow-right"></i></span>
                 </div>
@@ -136,14 +187,14 @@
             <!-- 6. Новость -->
             <article class="news-card" onclick="openModal('news6')">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Азиатские крылышки в кисло-сладком соусе с кунжутом" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80" alt="Крылышки по-азиатски в медово-имбирной глазури с кунжутом" class="card-img" loading="lazy">
                     <span class="news-category">Азия</span>
                 </div>
                 <div class="card-content">
                     <div class="news-meta">
-                        <span><i class="fa-regular fa-calendar"></i> 25 Сентября</span>
+                        <span><i class="fa-regular fa-calendar"></i> <time datetime="2026-09-25">25 Сентября</time></span>
                     </div>
-                    <h4>Азиатский стиль: крылышки в медово-имбирной глазури</h4>
+                    <h3>Азиатский стиль: крылышки в медово-имбирной глазури</h3>
                     <p class="news-snippet">Идеальный баланс пряности, сладости и карамельной корочки.</p>
                     <span class="read-more">Читать <i class="fa-solid fa-arrow-right"></i></span>
                 </div>
@@ -152,14 +203,14 @@
             <!-- 7. Новость -->
             <article class="news-card" onclick="openModal('news7')">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=80" alt="Коллекция острых соусов для куриных крылышек" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=80" alt="Коллекция самых острых соусов для куриных крылышек" class="card-img" loading="lazy">
                     <span class="news-category">Обзор</span>
                 </div>
                 <div class="card-content">
                     <div class="news-meta">
-                        <span><i class="fa-regular fa-calendar"></i> 24 Сентября</span>
+                        <span><i class="fa-regular fa-calendar"></i> <time datetime="2026-09-24">24 Сентября</time></span>
                     </div>
-                    <h4>Топ-5 самых жгучих соусов мира, которые стоит попробовать</h4>
+                    <h3>Топ-5 самых жгучих соусов мира, которые стоит попробовать</h3>
                     <p class="news-snippet">От соусов на основе перца Каролина Рипер до традиционных мексиканских сальс.</p>
                     <span class="read-more">Читать <i class="fa-solid fa-arrow-right"></i></span>
                 </div>
@@ -167,13 +218,11 @@
         </div>
     </main>
 
-    <!-- Модальное окно для чтения полной новости -->
-    <div id="newsModal" class="modal">
+    <!-- Модальное окно -->
+    <div id="newsModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div id="modalBody">
-                <!-- Динамический контент заполняется скриптом -->
-            </div>
+            <span class="close-btn" onclick="closeModal()" aria-label="Закрыть окно">&times;</span>
+            <div id="modalBody"></div>
         </div>
     </div>
 
@@ -182,18 +231,18 @@
         <div class="container footer-grid">
             <div class="footer-col">
                 <div class="logo footer-logo">
-                    <i class="fa-solid fa-drumstick-bite"></i>
+                    <i class="fa-solid fa-drumstick-bite" aria-hidden="true"></i>
                     <span>Крылышки <strong>News</strong></span>
                 </div>
                 <p>Главный кулинарный портал, посвященный культуре приготовления идеальных куриных крылышек и соусов.</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
-                    <a href="#"><i class="fa-brands fa-vk"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="Канал в Telegram"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" aria-label="Сообщество ВКонтакте"><i class="fa-brands fa-vk"></i></a>
+                    <a href="#" aria-label="Канал на YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Категории</h4>
+                <p class="footer-title">Категории</p>
                 <ul>
                     <li><a href="#news">Рецепты соусов</a></li>
                     <li><a href="#news">Секреты панировки</a></li>
@@ -202,7 +251,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Информация</h4>
+                <p class="footer-title">Информация</p>
                 <ul>
                     <li><a href="#">О проекте</a></li>
                     <li><a href="#">Редакционная коллегия</a></li>
@@ -223,7 +272,7 @@
                 title: 'Революция вкуса: изобретен новый взрывной соус «Манго-Хабанеро Экстрим» для крылышек',
                 date: '30 Сентября, 2026',
                 img: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=1200&q=80',
-                text: 'Известные шеф-повара представили уникальную комбинацию тропической сладости манго и жгучего перца хабанеро, которая покорила любителей остренького по всему миру. Новый соус создается путем трехчасового товления спелых фруктов с добавлением копченого перца, меда и капли лайма. По словам создателей, соус идеально подходит как к классическим крылышкам фритюр, так и к запеченным на углях. Попробуйте приготовить его дома: смешайте пюре манго, мелко нарезанный перец хабанеро, столовую ложку яблочного уксуса и немного коричневого сахара.'
+                text: 'Известные шеф-повара представили уникальную комбинацию тропической сладости манго и жгучего перца хабанеро, которая покорила любителей остренького по всему миру. Новый соус создается путем трехчасового томления спелых фруктов с добавлением копченого перца, меда и капли лайма. По словам создателей, соус идеально подходит как к классическим крылышкам фритюр, так и к запеченным на углях. Попробуйте приготовить его дома: смешайте пюре манго, мелко нарезанный перец хабанеро, столовую ложку яблочного уксуса и немного коричневого сахара.'
             },
             'news2': {
                 title: 'Секрет идеального хруста: японская панировка для крылышек',
@@ -270,7 +319,7 @@
             const modalBody = document.getElementById('modalBody');
             modalBody.innerHTML = `
                 <span class="modal-category">Кулинарные новости</span>
-                <h2>${article.title}</h2>
+                <h2 id="modalTitle">${article.title}</h2>
                 <div class="news-meta" style="margin-bottom: 20px;">
                     <span><i class="fa-regular fa-calendar"></i> ${article.date}</span>
                     <span><i class="fa-solid fa-user-pen"></i> Редакция Крылышки News</span>
@@ -280,9 +329,9 @@
                 <div class="modal-footer-share">
                     <p>Поделиться новостью:</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-telegram"></i></a>
-                        <a href="#"><i class="fa-brands fa-vk"></i></a>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="#" aria-label="Поделиться в Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="#" aria-label="Поделиться во ВКонтакте"><i class="fa-brands fa-vk"></i></a>
+                        <a href="#" aria-label="Скопировать ссылку"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
             `;
